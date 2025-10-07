@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  notebook:
+    build: .
+    container_name: gpu_notebook
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./workspace:/workspace
+      - ./data:/workspace/data
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    command: jupyter notebook --ip=0.0.0.0 --allow-root --no-browser --NotebookApp.token=''
