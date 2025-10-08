@@ -7,3 +7,4 @@ unidecode~=1.4.0
 tqdm~=4.67.1
 numpy~=1.26.4
 h5py~=3.10.0
+scikit-learn
