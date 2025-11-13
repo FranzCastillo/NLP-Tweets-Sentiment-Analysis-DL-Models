@@ -49,6 +49,25 @@ Puede que los directorios de los datos den error, ajustar según sea necesario.
 5. **Evaluación**: Compara métricas de rendimiento de los modelos
 6. **Guardado**: Los modelos entrenados se guardan en `workspace/models/`
 
+### Probar los Modelos Entrenados
+
+Para probar los modelos con tus propias reseñas, puedes usar el script `test.py` dentro del mismo contenedor de Docker:
+
+1. **Edita el archivo de pruebas**: Abre `workspace/user_test_reviews.txt` y escribe las reseñas que quieres analizar (una por línea)
+
+2. **Ejecuta el script de prueba**: Accede al contenedor y ejecuta:
+   ```bash
+   docker exec -it <container_name> python workspace/test.py
+   ```
+   
+   O si ya estás dentro del contenedor:
+   ```bash
+   cd workspace
+   python test.py
+   ```
+
+3. **Resultados**: El script cargará cada modelo entrenado (baseline, model1, model2, model3) y predecirá el sentimiento (positivo/negativo) de cada línea del archivo `user_test_reviews.txt`
+
 ## Estructura del Proyecto
 
 ```
@@ -62,6 +81,8 @@ NLP-Tweets-Sentiment-Analysis-DL-Models/
 │   └── processed.csv          # Dataset preprocesado
 └── workspace/                  # Directorio de trabajo
     ├── app.ipynb              # Notebook principal
+    ├── test.py                # Script para probar modelos
+    ├── user_test_reviews.txt  # Archivo con reseñas de prueba
     ├── data/                  # Enlace a datos
     └── models/                # Modelos entrenados
         ├── baseline.h5        # Modelo baseline
@@ -113,3 +134,4 @@ El pipeline de preprocesamiento incluye:
 6. Lematización con SpaCy
 7. Eliminación de stopwords
 8. Limpieza de espacios en blanco
+
