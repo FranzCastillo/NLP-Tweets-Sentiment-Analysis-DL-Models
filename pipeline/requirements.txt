@@ -6,4 +6,7 @@ contractions~=0.1.73
 unidecode~=1.4.0
 tqdm~=4.67.1
 numpy~=1.26.4
-
+scikit-learn~=1.5.2
+tensorflow~=2.15.0
+matplotlib~=3.9.0
+joblib~=1.4.2
