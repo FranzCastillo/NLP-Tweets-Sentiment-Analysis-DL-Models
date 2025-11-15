@@ -28,7 +28,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
 
     - name: Cache pip packages
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: ~/.cache/pip
         key: ${{ runner.os }}-pip-${{ hashFiles('pipeline/requirements.txt') }}
@@ -84,4 +84,3 @@ jobs:
       run: |
         pip install pipeline/dist/*.whl
         python -c "import pipeline; print(f'Package version: {pipeline.__version__}')"
-
