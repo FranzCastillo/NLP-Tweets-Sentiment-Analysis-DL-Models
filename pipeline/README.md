@@ -152,9 +152,12 @@ Francisco Castillo - cas21562@uvg.edu.gt
 
 ## Changelog
 
+### 0.1.1 (2025-11-15)
+- Test release for CI/CD pipeline
+- Updated GitHub Actions workflows
+
 ### 0.1.0 (2025-11-14)
 - Initial release
 - Data preparation subpackage
 - Modeling subpackage
 - Evaluation subpackage
-
