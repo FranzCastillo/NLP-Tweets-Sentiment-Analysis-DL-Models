@@ -152,6 +152,10 @@ Francisco Castillo - cas21562@uvg.edu.gt
 
 ## Changelog
 
+### 0.1.2 (2025-11-15)
+- Second test release for PyPI publishing
+- CI/CD pipeline testing
+
 ### 0.1.1 (2025-11-15)
 - Test release for CI/CD pipeline
 - Updated GitHub Actions workflows

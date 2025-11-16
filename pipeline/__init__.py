@@ -12,7 +12,7 @@ Subpackages:
 
 """
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 __author__ = "Francisco Castillo"
 __email__ = "cas21562@uvg.edu.gt"
 
