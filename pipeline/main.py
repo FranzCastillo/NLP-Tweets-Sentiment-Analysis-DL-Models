@@ -1,8 +1,8 @@
 import os
 import pandas as pd
-from .data_preparation import DataExtractor, TextPreprocessor, DataSplitter
-from .modeling import BaselineModel, TfidfVectorizerWrapper
-from .evaluation import ModelEvaluator
+from data_preparation import DataExtractor, TextPreprocessor, DataSplitter
+from modeling import BaselineModel, TfidfVectorizerWrapper
+from evaluation import ModelEvaluator
 
 
 def main():
