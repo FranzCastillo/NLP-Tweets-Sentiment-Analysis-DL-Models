@@ -1,19 +1,17 @@
-version: '3.8'
+version: '2.4'
 
 services:
   pipeline:
     build: .
     container_name: nlp_data_pipeline
     volumes:
-      # Anonymous volume for data persistence
       - pipeline_data:/app/data
-      # Mount pipeline code (optional - for development)
       - ./data_preparation:/app/data_preparation
     environment:
       - PYTHONUNBUFFERED=1
     stdin_open: true
     tty: true
-    # Memory limits to prevent OOM
+    # Memory limits for local compose (supported in v2.4)
     mem_limit: 4g
     mem_reservation: 2g
     shm_size: 2g
