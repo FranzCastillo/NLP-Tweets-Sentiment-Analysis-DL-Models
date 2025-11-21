@@ -11,10 +11,9 @@ services:
       - PYTHONUNBUFFERED=1
     stdin_open: true
     tty: true
-    # Memory limits for local compose (supported in v2.4)
-    mem_limit: 4g
-    mem_reservation: 2g
-    shm_size: 2g
+    mem_limit: 8g        # Increased from 4g
+    mem_reservation: 4g   # Increased from 2g
+    shm_size: 4g         # Increased from 2g
 
 volumes:
   pipeline_data:
